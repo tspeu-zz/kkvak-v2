@@ -1,0 +1,56 @@
+<!--
+  Generated template for the DetallePage page.
+
+  See http://ionicframework.com/docs/v2/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-navbar primaryColorlight>
+    <ion-title>detalle</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+
+<ion-list>
+  <ion-item>
+    <ion-thumbnail item-left><!---->
+      <img src="images/thumb-{{img}}.jpg">
+    </ion-thumbnail>
+	    <h2>{{titl}}</h2>
+	    <p>{{desc}}</p>
+    <button clear item-right>View</button>
+  </ion-item>
+
+<ion-item>
+  <ion-range [(ngModel)]="brightness">
+    <ion-icon range-left small name="sunny"></ion-icon>
+    <ion-icon range-right name="sunny"></ion-icon>
+  </ion-range>
+</ion-item>
+
+<ion-item>
+  <ion-range min="-200" max="200" pin="true" [(ngModel)]="contrast" secondary>
+    <ion-icon range-left small name="contrast"></ion-icon>
+    <ion-icon range-right name="contrast"></ion-icon>
+  </ion-range>
+</ion-item>
+
+
+<ion-item>
+  <ion-range min="1000" max="2000" step="100" snaps="true" [(ngModel)]="warmth" danger>
+    <ion-icon range-left small danger name="thermometer"></ion-icon>
+    <ion-icon range-right danger name="thermometer"></ion-icon>
+  </ion-range>
+</ion-item>
+
+<ion-range dualKnobs="true" pin="true" [(ngModel)]="structure" dark>
+  <ion-icon range-left small name="brush"></ion-icon>
+  <ion-icon range-right name="brush"></ion-icon>
+</ion-range>
+
+</ion-list>
+
+</ion-content>
